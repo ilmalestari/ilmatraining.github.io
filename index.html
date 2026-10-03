@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Training</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f8fb;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            background: #0b5ed7;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #8ee6ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #8ee6ff;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 500px;
+            background: linear-gradient(
+                rgba(0, 76, 153, 0.8),
+                rgba(0, 119, 182, 0.8)
+            ),
+            url("https://images.unsplash.com/photo-1581578731548-c64695cc6952")
+            center/cover;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #0b5ed7;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #8ee6ff;
+            color: #003566;
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: #0b5ed7;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #607d8b;
+        }
+
+        /* ================= INTRO ================= */
+
+        .intro {
+            background: white;
+        }
+
+        .intro-box {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .intro-box p {
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+        /* ================= DAFTAR DIREKSI ================= */
+
+        .direksi-container {
+        max-width: 900px;
+        margin: 30px auto 0;
+        padding: 25px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .direksi-container h3 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0b5ed7;
+        }
+
+        .direksi-list {
+        margin: 0;
+        padding-left: 25px;
+        }
+
+        .direksi-list li {
+        padding: 15px 10px;
+        margin-bottom: 10px;
+        background: #f4f8fb;
+        border-radius: 10px;
+        }
+
+        .direksi-list strong {
+        display: block;
+        font-size: 17px;
+        color: #222;
+        }
+
+        .direksi-list span {
+        display: block;
+        margin-top: 5px;
+        color: #666;
+        font-size: 14px;
+        }
+
+        /* ================= TABLE ================= */
+
+        .table-container {
+            overflow-x: auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        th {
+            background: #0b5ed7;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #f5f9fd;
+        }
+
+        tr:hover {
+            background: #e3f2fd;
+        }
+
+        .chemical-name {
+            font-weight: bold;
+            color: #0b5ed7;
+        }
+        /* ================= GAMBAR PRODUK ================= */
+
+        .product-image {
+        width: 110px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        transition: 0.3s;
+        }
+
+        .product-image:hover {
+        transform: scale(1.08);
+        }
+        /* ================= GAMBAR MESIN ================= */
+
+        .machine-image {
+        width: 130px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        transition: 0.3s ease;
+        }
+
+        .machine-image:hover {
+        transform: scale(1.08);
+        }
+
+        /* ================= CARD APD ================= */
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #0b5ed7;
+            margin-bottom: 10px;
+        }
+
+        /* ================= SAFETY ================= */
+
+        .safety {
+            background: #e8f4ff;
+        }
+
+        .safety-list {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .safety-item {
+            background: white;
+            margin-bottom: 15px;
+            padding: 18px 20px;
+            border-left: 5px solid #0b5ed7;
+            border-radius: 5px;
+        }
+
+        .safety-item strong {
+            color: #0b5ed7;
+        }
+
+        
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #063970;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+    <div class="logo">
+        🧹 Clean<span>Training</span>
+    </div>
+
+    <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#singkatan">Singkatan</a></li>
+    <li><a href="#chemical">Chemical</a></li>
+    <li><a href="#alat">Alat</a></li>
+    <li><a href="#mesin">Mesin</a></li>
+    <li><a href="#apd">APD</a></li>
+    <li><a href="#safety">Keselamatan</a></li>
+    </ul>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Training Cleaning Service</h1>
+
+        <p>
+            Materi dasar mengenai chemical, alat kebersihan,
+            APD, dan keselamatan kerja dalam dunia Cleaning Service.
+        </p>
+
+        <a href="#chemical" class="btn">
+            Mulai Training
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section id="intro">
+
+    <div class="section-title">
+        <h2>📚 Pengenalan Training Cleaning Service</h2>
+        <p>
+            Website ini berisi materi training Cleaning Service yang
+            dapat membantu petugas memahami chemical, alat kebersihan,
+            mesin cleaning service, serta prosedur keselamatan kerja.
+        </p>
+    </div>
+
+    <!-- ================= DAFTAR DIREKSI ================= -->
+
+    <div class="direksi-container">
+
+        <h3>👔 Daftar Direksi</h3>
+
+        <ol class="direksi-list">
+
+            <li>
+                <strong>Direktur Utama</strong>
+                <span>Ir. Budi Darmastuti (Bu tuti)</span>
+            </li>
+
+            <li>
+                <strong>Wakil Direktur Pertama</strong>
+                <span>Bu Budi Artiningrum (Bu Arum)</span>
+            </li>
+
+            <li>
+                <strong>Wakil Direktur Kedua</strong>
+                <span>Bu Budi Anitarini (Bu Arin)</span>
+            </li>
+
+        </ol>
+
+    </div>
+
+</section>
+
+<!-- ================= SINGKATAN RESIK CEMERLANG ================= -->
+
+<section id="singkatan">
+
+    <div class="section-title">
+
+        <h2>📖 Singkatan yang Harus Dihapal</h2>
+
+        <p>
+            Daftar singkatan yang perlu diketahui dan dihafalkan
+            oleh petugas Cleaning Service.
+        </p>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>No</th>
+                    <th>Singkatan</th>
+                    <th>Keterangan</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td class="abbreviation">APD</td>
+                    <td>
+                        Alat Pelindung Diri
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td class="abbreviation">SOP</td>
+                    <td>
+                        Standard Operasional prosedur, yaitu
+                        prosedur pedoman dalam melakukan pekerjaan.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td class="abbreviation">MAC</td>
+                    <td>
+                        Mesin, Aksesoris, Chemical
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td class="abbreviation">GS</td>
+                    <td>
+                        General Service artinya pelayanan keseluruhan.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td class="abbreviation">GC</td>
+                    <td>
+                        General Cleaning artinya pembersihan keseluruhan.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td class="abbreviation">5S</td>
+                    <td>
+                        Senyum, Salam, Sapa, Sopan, Santun.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td class="abbreviation">5R</td>
+                    <td>
+                        Ringkas, Rapi, Resik, Rawat, Rajin
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td class="abbreviation">Pimpro</td>
+                    <td>
+                        Pimpinan Proyek
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td class="abbreviation">Korlap</td>
+                    <td>
+                        Koordinator Lapangan
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+<!-- ================= CHEMICAL ================= -->
+
+<section id="chemical">
+
+    <div class="section-title">
+
+        <h2>🧪 Daftar Chemical Cleaning Service</h2>
+
+        <p>
+            Jenis chemical yang umum digunakan dalam pekerjaan Cleaning Service.
+        </p>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>No</th>
+                    <th>Contoh Gambar</th>
+                    <th>Nama Chemical</th>
+                    <th>Fungsi</th>
+                    <th>Area Penggunaan</th>
+                    <th>Takaran Pemakaian</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+
+                    <td>
+                        <img 
+                            src="glass cleaner.webp"
+                            alt="Glass Cleaner"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Glass Cleaner
+                    </td>
+
+                    <td>
+                        Membersihkan kaca dan dapat dipakai untuk chemical dusting meja kerja (multifungsi).
+                    </td>
+
+                    <td>
+                        Kaca, jendela, cermin, dan meja kerja.
+                    </td>
+
+                    <td>
+                        Campuran 1:1.
+                        <br> 
+                        <b>Catatan :</b> Untuk pengelapan meja jangan langsung disemprot ke meja, tapi semprot dulu ke kain Microfiber yang digunakan untuk mendusting.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>2</td>
+
+                    <td>
+                        <img 
+                            src="floor cleaner.webp"
+                            alt="Floor Cleaner"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Floor Cleaner
+                    </td>
+
+                    <td>
+                        Membersihkan kotoran pada
+                        permukaan lantai.
+                    </td>
+
+                    <td>
+                        Lantai
+                    </td>
+
+                    <td>
+                        1 liter air : 2 tutup botol glass cleaner (kira-kira saja)
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>3</td>
+
+                    <td>
+                        <img 
+                            src="karbol.jpg"
+                            alt="Karbol"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Karbol
+                    </td>
+
+                    <td>
+                        Untuk menghilangkan bau tidak sedap, khusus untuk ruang toilet sekaligus membunuh bakteri dan menimbulkan aroma wangi
+                    </td>
+
+                    <td>
+                        toilet
+                    </td>
+
+                    <td>
+                        kira kira saja
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>4</td>
+
+                    <td>
+                        <img 
+                            src="Taf.webp"
+                            alt="taf"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Taf
+                    </td>
+
+                    <td>
+                        Membersihkan kloset, washtafel , dan bahan stainless steel
+                    </td>
+
+                    <td>
+                        toilet.
+                    </td>
+
+                    <td>
+                        murni
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>5</td>
+
+                    <td>
+                        <img 
+                            src="handsoap.webp"
+                            alt="Handsoap"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Handsoap
+                    </td>
+
+                    <td>
+                        sabun cuci tangan untuk mebersihkan kuman ditangan.
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        murni.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>6</td>
+
+                    <td>
+                        <img 
+                            src="lemon pledge.webp"
+                            alt="lemon pledge"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Lemon Pledge (lemon plet)
+                    </td>
+
+                    <td>
+                        Membersihkan dan mengkilapkan permukaan berbahan kayu, vinyl, dan kulit
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        murni (dalam kemasan kaleng)
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>7</td>
+
+                    <td>
+                        <img 
+                            src="sabun  cuci piring.jpg"
+                            alt="Sabun cuci piring"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Sabun Cuci Piring
+                    </td>
+
+                    <td>
+                        Mencuci peralatan makanan
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        Kira kira saja
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>8</td>
+
+                    <td>
+                        <img 
+                            src="detergen bubuk.webp"
+                            alt="Detergent"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Detergent
+                    </td>
+
+                    <td>
+                        Bubuk untuk mencuci peralatan kerja seperti lap kotak, kain Microfiber, poodle mop, dwilap, dll.
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        kira kira saja
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>9</td>
+
+                    <td>
+                        <img 
+                            src="hit.webp"
+                            alt="Hit"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Hit
+                    </td>
+
+                    <td>
+                        Membunuh serangga.
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                    Semprot seperlunya
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>10</td>
+
+                    <td>
+                        <img 
+                            src="pengharum ruangan.webp"
+                            alt="Pengharum ruangan"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Pengharum Ruangan
+                    </td>
+
+                    <td>
+                        Memberikan aroma pada
+                        ruangan.
+                    </td>
+
+                    <td>
+                        Ruangan dan area yang
+                        diinginkan.
+                    </td>
+
+                    <td>
+                        Semprot secukupnya.
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ALAT KEBERSIHAN & AKSESORIS================= -->
+
+<section id="alat">
+
+    <div class="section-title">
+
+        <h2>🧹 Daftar Alat Kebersihan & Aksesoris</h2>
+
+        <p>
+            Berbagai alat yang digunakan dalam pekerjaan Cleaning Service.
+        </p>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>No</th>
+                    <th>Contoh Gambar</th>
+                    <th>Nama Alat</th>
+                    <th>Fungsi</th>
+                    <th>Area Penggunaan</th>
+                    <th>Cara Perawatan</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+
+                    <td>
+                        <img
+                            src="avfalbak.webp"
+                            alt="afvalbak"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Afvalbak
+                    </td>
+
+                    <td>
+                        untuk menempatkan sampah sementara, yang di dalamnya harus dilapisi dengan plastik sack
+                    </td>
+
+                    <td>
+                        Outdoor.
+                    </td>
+
+                    <td>
+                        Bersihkan dan di cuci setidaknya seminggu sekali
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>2</td>
+
+                    <td>
+                        <img
+                            src="Alumunium Stick Handle.webp"
+                            alt="Alumunium Stick Handle"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Alumunium Stick Handle
+                    </td>
+
+                    <td>
+                        Alat bantu untuk poodle mop, dan lobby duster
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                       
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>3</td>
+
+                    <td>
+                        <img
+                            src="danger notice.webp"
+                            alt="Danger Notice"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Danger Notice
+                    </td>
+
+                    <td>
+                        Tanda peringatan sedang ada pengerjaan, seperti pencucian atau pengelapan.
+                    </td>
+
+                    <td>
+                        Indoor/Oudoor
+                    </td>
+
+                    <td>
+                        
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>4</td>
+
+                    <td>
+                        <img
+                            src="emmer dianex.webp"
+                            alt="Emmer Dianex"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Emmer Dianex
+                    </td>
+
+                    <td>
+                        Ember yang terdapat dua bagian untuk air bersih dengan chemical dan air bersih untuk bilas
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        Kosongkan, cuci dan
+                        keringkan.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+
+                    <td>
+                        <img
+                            src="Poodle MOP SET.webp"
+                            alt="Poodle MOP SET"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Poodle MOP SET
+                    </td>
+
+                    <td>
+                        Untuk mengepel area sedang dan sempit
+                    </td>
+
+                    <td>Indoor/Outdoor
+        
+                    </td>
+
+                    <td>Setelah pemakaian harus dicuci lalu dikeringkan
+                        
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>6</td>
+
+                    <td>
+                        <img
+                            src="Sapu ijuk atau Sapu plastik.webp"
+                            alt="Sapu ijuk/Sapu plastik"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Sapu ijuk/Sapu plastik
+                    </td>
+
+                    <td>
+                        Untuk menyapu sampah besar/kecil di area sempit
+                    </td>
+
+                    <td>
+                        Indoor/Outdoor
+                    </td>
+
+                    <td>
+                        
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>7</td>
+
+                    <td>
+                        <img
+                            src="Lobby Duster.webp"
+                            alt="Lobby Duster"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Lobby Duster
+                    </td>
+
+                    <td>
+                        Untuk menyapu lantai kering di area luas
+                    </td>
+
+                    <td>
+                        Indoor
+                    </td>
+
+                    <td>
+                        Rutin dibersihkan dengan cara di vacuum.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>8</td>
+
+                    <td>
+                        <img
+                            src="Pengki plastik atauDuspan.webp"
+                            alt="Pengki plastik/Dustpan"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Pengki plastik/Dustpan
+                    </td>
+
+                    <td>
+                        Untuk mengangkat kotoran yang telah disapu
+                    </td>
+
+                    <td>
+                        Indoor/Outdoor
+                    </td>
+
+                    <td>
+                        
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>9</td>
+
+                    <td>
+                        <img
+                            src="Plastick Sack.webp"
+                            alt="Plastick Sack"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Plastick Sack
+                    </td>
+
+                    <td>
+                        Untuk mengumpulkan sampah sementara sebelum dikumpulkan ke TPS.
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+
+                    <td>
+                        <img
+                            src="Professional Double Bucket.webp"
+                            alt="Professional Double Bucket"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Professional Double Bucket
+                    </td>
+
+                    <td>
+                        Alat untuk membersihkan kaca, yang diisi dengan air bersih dengan chemical dan air bersih untuk bilas
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        Setelah dipakai langsung dibersihkan dan dikeringkan
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>11</td>
+
+                    <td>
+                        <img
+                            src="Window washer.webp"
+                            alt="Window Washer"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Window Washer
+                    </td>
+
+                    <td>
+                        Alat untuk membasahi permukaan kaca
+                    </td>
+
+                    <td>
+                        Indoor/Outdoor
+                    </td>
+
+                    <td>
+                        Bersihkan dan keringkan
+                        setelah digunakan.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>12</td>
+
+                    <td>
+                        <img
+                            src="Window wiper atau squeegee.webp"
+                            alt="Window wiper/squeegee"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Window wiper/squeegee
+                    </td>
+
+                    <td>
+                        Alat untuk menarik atau mengeringkan permukaan kaca setelah dibasahi dengan window washer.
+                    </td>
+
+                    <td>
+                        Indoor/Outdoor
+                    </td>
+
+                    <td>
+                        Setelah pemakaian bersihkan dan keringkan sebelum disimpan.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>13.</td>
+
+                    <td>
+                        <img
+                            src="Sprayer Bottle.webp"
+                            alt="Sprayer Bottle"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Sprayer Bottle
+                    </td>
+
+                    <td>
+                        Sebagai wadah chemical yang akan digunakan (diharapkan agar nama chemical ditulis pada permukaan botol sprayer)
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>14</td>
+
+                    <td>
+                        <img
+                            src="sarung tangan.webp"
+                            alt="Sarung tangan"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Sarung Tangan
+                    </td>
+
+                    <td>
+                        Untuk melindungi tangan dari kotoran dan chemical keras
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                       Setelah dipakai dicuci dulu lalu dikeringkan sebelum disimpan 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>15</td>
+
+                    <td>
+                        <img
+                            src="Jumbo Pad.avif"
+                            alt="Jumbo Pad"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Jumbo Pad
+                    </td>
+
+                    <td>
+                       Putih: untuk kotoran ringan<br>
+                       Merah: untuk kotoran sedang<br>
+                       Hjau/Hitam : untuk kotoran berat
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        Setelah dipakai langsung dibersihkan dan dikeringkan
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>16</td>
+
+                    <td>
+                        <img
+                            src="caddy bag.jpeg"
+                            alt="caddy Bag"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Caddy Bag
+                    </td>
+
+                    <td>
+                        Tas pinggang untuk menempatkan alat kerja 
+                    </td>
+
+                    <td>
+                       
+                    </td>
+
+                    <td>
+                        pastikan disimpan dalam keadaan bersih.
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+
+                    <td>
+                        <img
+                            src="Lap atau Kain Microfiber.webp"
+                            alt="Lap/Kain Microfiber"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Lap/Kain Microfiber
+                    </td>
+
+                    <td>
+                        Lap biru: Interior kantor <br>
+                        Lap Merah: Area Toilet
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                       Setelah dipakai dicuci dulu lalu dikeringkan sebelum disimpan 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>18</td>
+
+                    <td>
+                        <img
+                            src="Lap Kotak.webp"
+                            alt="Lap Kotak"
+                            class="product-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Lap Kotak
+                    </td>
+
+                    <td>
+                       Lap yang digunakan di area dapur
+                    </td>
+
+                    <td>
+                        Dapur
+                    </td>
+
+                    <td>
+                        Setelah dipakai langsung dibersihkan dan dikeringkan
+                    </td>
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+<!-- ================= MESIN CLEANING SERVICE ================= -->
+
+<section id="mesin">
+
+    <div class="section-title">
+
+        <h2>⚙️ Pengenalan Mesin Cleaning Service</h2>
+
+        <p>
+            Mengenal berbagai jenis mesin yang digunakan untuk membantu
+            pekerjaan kebersihan secara lebih efektif dan efisien.
+        </p>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>No</th>
+                    <th>Contoh Gambar</th>
+                    <th>Nama Mesin</th>
+                    <th>Fungsi</th>
+                    <th>Area Penggunaan</th>
+                    <th>Cara Penggunaan</th>
+                   
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <!-- 1 -->
+
+                <tr>
+
+                    <td>1</td>
+
+                    <td>
+                        <img
+                            src="Dry Vacuum Cleaner.webp"
+                            alt="Dry Vacuum Cleaner"
+                            class="machine-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Dry Vacuum Cleaner
+                    </td>
+
+                    <td>
+                        Untuk menyedot debu pada kasur, karpet, dan sofa.
+                    </td>
+
+                    <td>
+                        Karpet, lantai, sofa, dan area
+                        indoor tertentu.
+                    </td>
+
+                    <td>
+                        Setelah pemakaian kabel jangan langsung digulung  tunggu sampai 10-15 menit. Jika penggunaan mesin lebih dari 1 jam maka istirahatkan dulu mesin selama 20 menit.
+                    </td>
+
+
+                </tr>
+
+
+                <!-- 2 -->
+
+                <tr>
+
+                    <td>2</td>
+
+                    <td>
+                        <img
+                            src="Wet & Dry  Vacuum.webp"
+                            alt="Wet and Dry Vacuum"
+                            class="machine-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Wet & Dry Vacuum
+                    </td>
+
+                    <td>
+                        Menghisap kotoran kering maupun menyedot air yang tergenang dilantai setelah pencucian dan penyikatan .
+                    </td>
+
+                    <td>
+                        Lantai, area basah, basement, dan area tertentu.
+                    </td>
+
+                    <td>
+                        Setelah pemakaian kabel jangan langsung digulung  tunggu sampai 10-15 menit. Jika penggunaan mesin lebih dari 1 jam maka istirahatkan dulu mesin selama 20 menit.
+                    </td>
+
+                </tr>
+
+
+                <!-- 3 -->
+
+                <tr>
+
+                    <td>3</td>
+
+                    <td>
+                        <img
+                            src="Polisher.webp"
+                            alt="Polisher"
+                            class="machine-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Polisher
+                    </td>
+
+                    <td>
+                        Untuk pembersihan lantai dan pencucian karpet
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        Setelah pemakaian kabel jangan langsung digulung  tunggu sampai 10-15 menit. Jika penggunaan mesin lebih dari 1 jam maka istirahatkan dulu mesin selama 20 menit.
+                    </td>
+
+                    
+                </tr>
+
+
+                <!-- 4 -->
+
+                <tr>
+
+                    <td>4</td>
+
+                    <td>
+                        <img
+                            src="Blower.webp"
+                            alt="Blower"
+                            class="machine-image">
+                    </td>
+
+                    <td class="chemical-name">
+                        Blower
+                    </td>
+
+                    <td>
+                        Untuk mengeringkan lantai karpet yang telah dicuci.
+                    </td>
+
+                    <td>
+                        
+                    </td>
+
+                    <td>
+                        
+                        Setelah pemakaian kabel jangan langsung digulung  tunggu sampai 10-15 menit. Jika penggunaan mesin lebih dari 3 jam maka istirahatkan dulu mesin selama 40 menit..
+                    </td>
+
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APD ================= -->
+
+<section id="apd">
+
+    <div class="section-title">
+
+        <h2>🥽 Alat Pelindung Diri (APD)</h2>
+
+        <p>
+            APD digunakan sesuai dengan risiko pekerjaan dan petunjuk keselamatan.
+        </p>
+
+    </div>
+
+    <div class="card-container">
+
+        <div class="card">
+
+            <div class="icon">🧤</div>
+
+            <h3>Sarung Tangan</h3>
+
+            <p>
+                Melindungi tangan ketika menangani kotoran,
+                chemical, atau pekerjaan yang membutuhkan perlindungan tangan.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">😷</div>
+
+            <h3>Masker</h3>
+
+            <p>
+                Digunakan sesuai risiko pekerjaan untuk membantu
+                mengurangi paparan debu atau partikel tertentu.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🥽</div>
+
+            <h3>Pelindung Kacamata</h3>
+
+            <p>
+                Melindungi mata dari percikan bahan atau chemical
+                ketika pekerjaan membutuhkan perlindungan mata.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">👢</div>
+
+            <h3>Sepatu Safety</h3>
+
+            <p>
+                Membantu melindungi kaki dan memberikan
+                perlindungan terhadap risiko tertentu di area kerja.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SAFETY ================= -->
+
+<section class="safety" id="safety">
+
+    <div class="section-title">
+
+        <h2>⚠️ Keselamatan Kerja</h2>
+
+        <p>
+            Beberapa hal penting yang perlu diperhatikan saat bekerja.
+        </p>
+
+    </div>
+
+
+    <div class="safety-list">
+
+        <div class="safety-item">
+
+            <strong>1. Baca label chemical</strong>
+
+            <p>
+                Selalu baca label, petunjuk penggunaan, pengenceran,
+                peringatan dan informasi keselamatan sebelum menggunakan chemical.
+            </p>
+
+        </div>
+
+
+        <div class="safety-item">
+
+            <strong>2. Jangan mencampur chemical sembarangan</strong>
+
+            <p>
+                Jangan mencampur produk cleaning chemical kecuali
+                instruksi resmi produk atau SOP memang mengizinkannya.
+            </p>
+
+        </div>
+
+
+        <div class="safety-item">
+
+            <strong>3. Gunakan APD</strong>
+
+            <p>
+                Gunakan APD yang sesuai dengan risiko pekerjaan dan
+                instruksi keselamatan produk.
+            </p>
+
+        </div>
+
+
+        <div class="safety-item">
+
+            <strong>4. Berikan tanda area basah</strong>
+
+            <p>
+                Gunakan Danger Notice ketika melakukan pekerjaan
+                yang menyebabkan lantai menjadi basah.
+            </p>
+
+        </div>
+
+
+        <div class="safety-item">
+
+            <strong>5. Simpan chemical dengan benar</strong>
+
+            <p>
+                Simpan chemical sesuai label dan SOP tempat kerja,
+                serta jauhkan dari bahan yang tidak kompatibel.
+            </p>
+
+        </div>
+
+
+        <div class="safety-item">
+
+            <strong>6. Jaga kebersihan alat</strong>
+
+            <p>
+                Setelah selesai digunakan, alat harus dibersihkan,
+                dikeringkan dan disimpan pada tempat yang telah ditentukan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p><strong>🧹 CleanTraining</strong></p>
+
+    <p>
+        Website Training Dasar Cleaning Service
+    </p>
+
+    <p>
+        © 2026 | Dibuat untuk media pembelajaran
+    </p>
+
+</footer>
+
+
+
+</body>
+</html>
