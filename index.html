@@ -356,6 +356,259 @@
                 padding: 50px 5%;
             }
         }
+    /* =====================================================
+   RESPONSIVE DESIGN - HP ANDROID
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* ===== BODY ===== */
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+        padding: 10px 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        min-height: 70vh;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* ===== SECTION ===== */
+    section {
+        padding: 40px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .section-title p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* ===== TABEL ===== */
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 10px;
+    }
+
+    table {
+        min-width: 850px;
+        font-size: 13px;
+    }
+
+    th {
+        padding: 10px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 10px;
+        line-height: 1.5;
+    }
+
+    /* ===== GAMBAR TABEL ===== */
+    .product-image {
+        width: 90px;
+        height: 75px;
+    }
+
+    .machine-image {
+        width: 100px;
+        height: 80px;
+    }
+
+    /* ===== DAFTAR DIREKSI ===== */
+    .direksi-container {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .direksi-container h3 {
+        font-size: 20px;
+    }
+
+    .direksi-list {
+        padding-left: 25px;
+    }
+
+    .direksi-list li {
+        padding: 12px 8px;
+    }
+
+    .direksi-list strong {
+        font-size: 15px;
+    }
+
+    .direksi-list span {
+        font-size: 13px;
+    }
+
+    /* ===== CARD ===== */
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* ===== APD ===== */
+    .apd-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ===== BUTTON ===== */
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        padding: 25px 15px;
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN - HP KECIL
+   ===================================================== */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 13px;
+    }
+
+    /* Navbar */
+    nav {
+        padding: 8px 10px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 60vh;
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    /* Section */
+    section {
+        padding: 30px 10px;
+    }
+
+    .section-title h2 {
+        font-size: 21px;
+    }
+
+    .section-title p {
+        font-size: 13px;
+    }
+
+    /* Table */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 750px;
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    /* Images */
+    .product-image {
+        width: 75px;
+        height: 60px;
+    }
+
+    .machine-image {
+        width: 80px;
+        height: 65px;
+    }
+
+    /* Direksi */
+    .direksi-container {
+        padding: 15px;
+    }
+
+    .direksi-container h3 {
+        font-size: 18px;
+    }
+
+    /* Card */
+    .card {
+        padding: 15px;
+    }
+}
     </style>
 </head>
 <body>
